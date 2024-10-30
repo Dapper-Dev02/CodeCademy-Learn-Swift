@@ -1,0 +1,44 @@
+// Practicing Declaring a Variable
+    var score = 0
+    print(score)         RESULT: 0
+    var year = 2024
+    print(year)          RESULT: 2024
+
+// Practicing with Arithmetic Operators
+    var amount = 18.50
+    var tip = amount * 0.2
+    print(tip)               RESULT: 3.7
+
+// Practicing with Compound Assignment Operators
+    var apples = 16
+  // Customer Buys 4 Apples
+    apples -= 4              RESULT: 12
+  // Customer Buys Half of The Apples
+    apples /= 2            
+    print(apples)            RESULT: 6
+
+// Practicing with Different Data Types
+    // Task: Declare a String Variable names "Book" with a Value of "Just Kids"
+        var book: String = "Just Kids"
+
+    // Task: Declare an Integer Variable names "pageCount" with a Value of 278
+        var pageCount: Int = 278
+
+// Practicing with String Interpolation
+    // Task: Declare a Variable Called "age" and Set It Equal to Your Age.
+        var age = 29
+    
+    // Task: With "age" Set Up, Use "print()" and String Interpolation.
+        print("I am \(age) years old.")          RESULT: I am 29 years old.
+
+// Practicing with Constants
+    // Task: Declare a Constant Named "months" and Assign it The Number of Months That End with “y”.
+        let months = 4
+
+// End of Module Code Challenge
+    // Task: The mad scientist Kelvin has mastered predicting the weather in his mountain-side meteorology lab. Recently, Kelvin began publishing his weather forecasts on his website, however, there’s a problem: 
+              All of his forecasts describe the temperature in Fahrenheit degrees. Convert a temperature from Fahrenheit (°F) to Celsius (°C).
+          The formula is the following: C=(F−32)/1.8
+
+
+
