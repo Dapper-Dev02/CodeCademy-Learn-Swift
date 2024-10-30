@@ -37,3 +37,24 @@ Be determined and continue to be discipled. Learning to program is daunting and 
 Sincerely, Yourself
 October 30th, 2024
 
+/* Module Project: Block Letters
+       Task: Write a Swift program called Initials.swift that displays the initials of your name in block letters. */
+
+print(" SSS    DDDD")
+print("S   S   D    D")
+print("S       D    D")
+print(" SSS    D    D")
+print("    S   D    D")
+print("    S   D    D")
+print("S   S   D    D")
+print(" SSS    DDDD")
+
+ SSS    DDDD
+S   S   D    D
+S       D    D
+ SSS    D    D
+    S   D    D
+    S   D    D
+S   S   D    D
+ SSS    DDDD
+
