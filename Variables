@@ -56,7 +56,7 @@
 
         print("My BMI is \(bmi).")        RESULT: My BMI is 7.90039523328586.
 
-// Module Project #1 : "Dog Years"
+// Module Project #1: "Dog Years"
     // Task: Write a Swift program to calculate the age, in human years, of any dog older than 2.
         
         var dogAge = 8
@@ -70,4 +70,34 @@
             // Each following year amounts to 4 human years.
         humanYears = earlyYears + laterYears
         print("My dog's name is Luna, and she is \(humanYears) years old in human years.")     RESULT: My dog's name is Luna, and she is 45 years old in human years.
+
+// Module Project #2: "Quadratic Formula"                                                     2
+    // Task: Write a Swift program that solves the following quadratic equation for the x‘s. 2x + 5x + 3 = 0
+        // a = 2.0    b = 5.0    c = 3.0
+
+        var a, b, c: Double
+
+        a = 2.0
+        b = 5.0
+        c = 3.0
+
+        var root1: Double = 0
+        var root2: Double = 0
+
+    // The Positive Root (Multiline "Break Down" Method)
+        root1 = (3*3 - 4*a*c)
+        root1 = root1.squareRoot()
+        root1 = -b + root1
+        root1 = root1 / (2*a)
+
+    // The Negative Root (One Line Method)
+        root2 = (-b - (b*b - 4*a*c).squareRoot()) / (2*a)
+
+    // Outputting The Roots
+        print("Root 1 is \(root1)")
+        print("Root 2 is \(root2)")        RESULT: Root 1 is -nan
+                                                   Root 2 is -1.5
+
+// Module Project #3: "Piggy Bank"
+    // Task: Write a Swift program in that converts the amount of each foreign currency and displays the total amount in USD.
 
