@@ -1,0 +1,113 @@
+// The "If" Statement
+  // Task: Create an "If" Statement That Prints a Message
+    
+    var learningToCode = true
+    if learningToCode {
+    print("Don't forget to take breaks! You got this.")
+    }                                                     // RESULT: Don't forget to take breaks! You got this.
+
+
+// The "Else" Statement
+  // Task: Create an "if/else"" That Prints an Emoji Representing You.
+    
+    var wearGlasses = true
+    if wearGlasses {
+      print("I wear glasses.")
+    } else {
+      print("I don't wear glasses.")
+    }                                  // RESULT: I wear glasses.
+
+// Comparison Operators
+  // Task: Set Up an if/else Statement That Determines The Winning Team in a Basketball Game Between TuneSquad and Monstars.
+
+    let tuneSquadPoints = 78
+    let monstarsPoints = 77
+
+    if tuneSquadPoints < monstarsPoints {
+    print("TuneSquad wins! Congratulations!")
+    } else {
+    print("Monstars wins! Congratulations!")
+    }                                          RESULT: TuneSquad wins! Congratulations!
+
+// "Else if" Statements
+  // Task: Write a Program That Translates The Abbreviation of Languages Spoken in New York.
+
+      var language1: String
+        language1 = "English"
+      var language2: String
+        language2 = "Spanish"
+      var language3: String
+        language3 = "Chinese"
+      var language4: String
+        language4 = "Russian"
+  
+  /* Abbreviations For Each Language:
+    English = ENGL
+    Spanish = SPSH
+    Chinese = CHIN
+    Russian = RUSS 
+  */
+
+      var abbreviation = "ENGL"
+
+      if abbreviation == "ENGL" {
+        print("English")
+      } else if abbreviation == "SPSH" {
+        print("Spanish")
+      } else if abbreviation == "CHIN" {
+        print("Chinese")
+      } else if abbreviation == "RUSS" {
+        print("Russian")
+      } else {  
+        print("Abbreviation not found.")
+      }                                   // RESULT: English
+
+// Ternary Conditional Operators
+  // Task: Rewrite The Conditional Below in Ternary Format.
+      
+      var windy = true 
+
+      if windy {
+        print("Sails up")
+      } else {
+        print("Motor on")
+      }                    RESULT: Sails up
+
+  // Conditional Rewritten in Ternary Format
+
+      windy ? print("Sails up") : print("Motor on")      RESULT: Sails up
+
+// Switch Statements
+  // Task: Rewrite The Conditional Below in "Switch Statement" Format.
+
+      var secretIdentity = "Tony Stark"
+      var superheroName: String 
+ 
+      if secretIdentity == "Tony Stark" {
+        superheroName = "Iron Man"
+      } else if secretIdentity == "Natasha Romanoff" {
+        superheroName = "Black Widow" 
+      } else if secretIdentity == "Prince T'Challa" {
+        superheroName = "Black Panther"
+      } else if secretIdentity == "Thor" {
+        superheroName = "Thor"
+      } else {
+        superheroName = "Unknown"
+      }
+
+// Above Code Rewritten in "Switch Statement" Format
+
+      switch secretIdentity {
+        case "Tony Stark":
+          superheroName = "Iron Man"      
+        case "Natasha Romanoff":
+          superheroName = "Black Widow"
+        case "Prince T'Challa":
+          superheroName = "Black Panther"
+        case "Thor":
+          superheroName = "Thor"
+        default:
+          superheroName = "Unknown"
+      }
+        print(superheroName)        // RESULT: Iron Man
+
