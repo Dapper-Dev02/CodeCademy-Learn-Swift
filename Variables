@@ -100,4 +100,18 @@
 
 // Module Project #3: "Piggy Bank"
     // Task: Write a Swift program in that converts the amount of each foreign currency and displays the total amount in USD.
+        
+        // Declaring The Variables of The Curencies w/ Amounts of Each.
+            var pesos: Double = 12.0
+            var reais: Double = 41.0
+            var soles: Double = 62.0
+            var total: Double = 0.0
 
+        // Listing The Currency Conversion Rates to USD.
+          /* Pesos to USD   1 Peso : 0.50 USD
+             Reais to USD   1 Reais : 0.17 USD
+             Soles to USD   1 Sol : 0.27 USD 
+          */
+
+            total = (0.50 * pesos) + (0.17 * reais) + (0.27 * soles)
+            print ("US Dollars = $\(total)")                           // RESULT: US Dollars = $29.71
