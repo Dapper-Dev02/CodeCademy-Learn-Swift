@@ -111,3 +111,56 @@
       }
         print(superheroName)        // RESULT: Iron Man
 
+// Switch Statement: Interval Matching
+  // Task: Create a Switch Statement that determines the villain in a Stars Wars episode w/ The Given Variables Below.
+
+    var episode = 3
+    var villain: String 
+
+  // Start of Code For Task
+
+    switch episode {
+      case 1...3:
+        villain = "Emperor Palpatine"
+      case 4...6:
+        villain = "Darth Vader"
+      case 7...9:
+        villain = "Kylo Ren"
+      default:
+        villain = ""
+    } 
+    print(villain)              // RESULT: Emperor Palpatine
+
+// Switch Statement: Compound Cases
+  // Task: Set Up a Switch Statement That Utilizes Compound Cases to Determine The Type of Planet Its Given. //
+
+    var planet = "Neptune" 
+
+    switch planet {
+      case "Earth", "Mercury", "Venus", "Mars":
+        print("Terrestrial planet")
+      case "Saturn", "Jupiter", "Uranus", "Neptune":
+        print("Jovian planet")
+      default:
+        print("Unknown planet")
+    }                           // RESULT: Jovian planet
+
+// Switch Statement: Where Clause
+  // Task: Set Up a Program That Determines if a Number Between 10 and 20 is Prime or Composite.
+
+    var wholeNumber = 15 
+
+    switch wholeNumber {
+      case let x where x % 2 == 0:
+        print("Composite")
+      case let x where x % 3 == 0:
+        print("Composite")
+      default:
+        print("Prime")
+    }                   // RESULT: Composite
+
+  // Code Challenge
+    // Instead of Manually Assigning and Testing Different Values For wholeNumber, use .random() to Generate One For Us.
+
+       var wholeNumber = Int.random(in: 10...20)
+        print(wholeNumber)                        // RESULT: 12
