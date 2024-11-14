@@ -164,3 +164,72 @@
 
        var wholeNumber = Int.random(in: 10...20)
         print(wholeNumber)                        // RESULT: 12
+
+// Logical "AND" Operator
+  // Task: Create an "if" Statement That Checks If It is Midnight AND The Date is "January 1, 2020".
+
+      var midnight = true 
+      var date = "January 1, 2020"
+
+      if midnight && date == "January 1, 2020" {
+        print("It's the start of a new decade!")          // RESULT: It's the start of a new decade!
+      }  
+
+// Logical "OR" Operator
+  // Task 1. : Declare The Variables carInMotion and insideACar. Set "false" as The Value for carInMotion, and Set "true" for the value of insideACar. 
+
+    var carInMotion = false
+    var insideACar = true
+
+  // Task 2. : Create an "if" Statement That Determines The Boolean Result of carInMotion OR insideACar in Its Condition.
+
+    if carInMotion || insideACar {
+      print("Safety first! Buckle up.")       // RESULT: Safety first! Buckle up.
+    } 
+
+// Logical "NOT" Operator
+  // Task: Place Print Statements in Their Correct Code Blocks.
+
+      var feelingWell = true
+
+      if !feelingWell {
+        print("Have some vitamins and take care of yourself 🤒")  
+      } else {
+        print("Embrace the day!")        // RESULT: Embrace the day!  
+      }
+
+//  Combining Logical Operators
+  // Task: Use The Provided Variables, in Combination w/ Logical Operators, To Build a Program That Grants or Denies a User Access.
+
+    var correctPassword = false
+    var lessThanThreeTries = true 
+    var accessThroughTouchID = true
+    var unlock: Bool
+
+  // Personal Code Below
+
+    if correctPassword && lessThanThreeTries || accessThroughTouchID {
+      unlock = true
+    } else {
+      unlock = false
+    }
+      print(unlock)         // RESULT: true
+
+// Controlling Order of Execution
+  /* Task: Add The Correct Logical Operator in Place of ___ To Make Each Variable True. 
+
+    let bool1 = (true ___ false) || false || false 
+    let bool2 = !true ___ (false && false || true)
+    let bool3 = !(false && true) ___ (false || false) */ 
+
+    let bool1 = (true || false) || false || false 
+
+    let bool2 = !true || (false && false || true)
+
+    let bool3 = !(false && true) && (false || false)
+
+
+    print(bool1)      // RESULT: true
+    print(bool2)      // RESULT: true
+    print(bool3)      // RESULT: false
+
