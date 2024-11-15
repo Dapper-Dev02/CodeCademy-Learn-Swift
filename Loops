@@ -1,0 +1,68 @@
+// Repeating Tasks
+  // Task: Using 16 print() statements, print out: "This can be so much easier with loops!".
+    print("This can be so much easier with loops!")        //RESULT: This can be so much easier with loops! 
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!                
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+    print("This can be so much easier with loops!")                  This can be so much easier with loops!
+
+// The "for-in" Loop
+ /* Task #1: Create a for-in loop that:
+            - Uses age as the placeholder.
+            - Iterates over the range from 1 to your current age using the closed range operator .... For example, if you’re 35 years old, then your range is 1...35. */ 
+    print("Happy Birthday to you.")                  // RESULT: Happy Birthday to you.
+    print("Happy Birthday to you!")                             Happy Birthday to you!
+    print("Happy Birthday dear Codecademy Userrrr.")            Happy Birthday dear Codecademy Userrrr.
+    print("Happy Birthday to you!!")                            Happy Birthday to you!!
+    print(".......................")                            .......................
+
+    for age in 1...29 {                                         Are you 1?
+      print("Are you \(age)?")                                  Are you 2?
+    }                                                           Are you 3?
+                                                                Are you 4?
+                                                                Are you 5?  // Result Continues until "Are you 29?"
+                                                                   ...
+
+// The stride() Function
+  // Task: Change the sequence in the loop to use stride() to count backwards. 
+    print("We're starting in...")
+                                                    // RESULT: We're starting in...
+    for num in stride(from: 3, to: 0, by: -1) {                3
+      print(num)                                               2
+    }                                                          1
+    print("GO!")                                               GO!
+
+// Iterating Through Strings
+  /* Task: Create a for-in loop that iterates over the characters in funFact using char as the iterator (placeholder) variable. */
+                                                          // RESULT: e
+var funFact = "exlxephxxxaxnts xcaxxn'xxt xxxjxumxpx."               l
+                                                                     e
+for char in funFact {                                                p                    
+  if char != "x" {                                                   h
+    print(char)                                                      a  
+  }                                                                  n
+}                                                                    t
+                                                                     s
+
+                                                                     c
+                                                                     a
+                                                                     n
+                                                                     '
+                                                                     t
+
+                                                                     j
+                                                                     u
+                                                                     m
+                                                                     p
+                                                                     .
