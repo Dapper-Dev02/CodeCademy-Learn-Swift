@@ -233,3 +233,63 @@
     print(bool2)      // RESULT: true
     print(bool3)      // RESULT: false
 
+// Project: Magic 8-Ball
+  /* Objective: Hone your conditional skills by creating a program that can answer any “Yes” or “No” question with a different fortune each time. */
+
+    /* Task #1: Declare a constant "playerName" and assign it your name. */
+    let playerName = "Samuel"
+
+    /* Task #2: Declare a constant "playerQuestion" and assign it a "Yes" or "No" question. */ 
+    let playerQuestion = "Do you want to become an iOS Developer?"
+    
+    /* Task #4: Declare a constant "randomNumber" and assign it the result of calling .random() on a range of Ints, 1 through 9. */
+    let randomNumber = Int.random(in: 1...9)
+    
+    // print(randomNumber)    RESULT: Random Number is Generated
+  
+    /* Task #5: Declare the constant, eightBall to hold a String value. */
+    let eightBall: String 
+  
+    /* Task #6: Create a switch statement that accepts randomNumber as its expression and contains 9 cases. */
+    switch randomNumber {
+      case 1:
+        eightBall = "Yes - definitely!"
+      case 2:
+        eightBall = "It is decidedly so!"
+      case 3: 
+        eightBall = "Without a doubt!"
+      case 4:
+        eightBall = "Replay hazy, try again."
+      case 5:
+        eightBall = "Ask again later."
+      case 6:
+        eightBall = "Better not tell you now."
+      case 7:
+        eightBall = "My sources say no."
+      case 8:
+        eightBall = "Outlook isn't so good."
+      case 9:
+        eightBall = "It's very doubtful."
+      default:
+        eightBall = "Error"
+    } 
+   /* Task #7: Add a print() statement that will output the player’s name followed by their question. */
+   print("\(playerName) asks: \(playerQuestion)")
+  
+   /* Task #8: Add a second print() statement that will output the Magic 8 Ball’s answer */
+   print("Magic 8 Ball's answer: \(eightBall)")
+                                                /* RESULT: Samuel asks: Do you want to become an iOS Developer?
+                                                           Magic 8 Ball's answer: Yes - Definitely. */
+  // Optional Challenge
+    /* Objective: In place of your current print() statement, set up a conditional if someone else is using the program. */
+      /* Task #1: Create an if/else statement where: if playerName is an empty String, only the question is printed. Else, the player’s name and questions are both printed. */
+      if playerName.isEmpty {
+        print("Do you want to become an iOS Developer?")
+      } else {
+        print("\(playerName) asks: \(playerQuestion)")
+      }                                                // RESULT: Samuel asks: Do you want to become an iOS Developer? //
+      
+      /* Task #2: Convert your if/else statement into one line using the ternary conditional operator. */
+      playerName.isEmpty ? print("Question: \(playerQuestion)")
+      : print("\(playerName) asks: \(playerQuestion)")
+
