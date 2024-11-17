@@ -1,0 +1,46 @@
+// Arrays
+  // Task: Create an empty arrays named subwayAdult and subwayAdult of the type Int, then print them out.
+
+  var subwayAdult = [Int]()      // RESULT: []
+    print(subwayAdult)                      []
+  var subwayChild = [Int]()
+    print(subwayChild)
+
+// Creating an Array Literal
+  // Task #1: Create an array named subwayAdult and initialize it with 800, 1200, and 1500.
+
+  var subwayAdult = [800, 1200, 1500]
+    print(subwayAdult) 
+
+  /* Task #2: Initialize subwayChild with 400, 600, and 750. This time, be explicit with the type, then print it out. */
+                                                  // RESULT: [800, 1200, 1500]
+  var subwayChild: [Int] = [400, 600, 750]                   [400, 600, 750]
+    print(subwayChild)
+
+// Index 
+ // Task: Print the current temperature using its index.
+
+  var temperature: [Int] = [66, 68, 72, 76, 80, 82, 85, 85, 84, 82, 81, 78, 74, 73, 72, 71, 70, 69, 68, 65, 63, 62, 61, 63]
+
+  print(temperature[0])        // RESULT: 66
+
+// The ".count" Property
+  // Task: Print the size of the array using .count.        // RESULT: 20
+
+  var countingRhyme = ["eeny", "meeny", "miny", "moe", "catch", "a", "coder", "by", "the", "toe", "if", "they", "debug", "let", "them", "go", "eeny", "meeny", "miny", "moe"]
+
+  print(countingRhyme.count)
+
+// The ".append" Method
+  // Task #1: Add one more item to the resolutions array using .append().
+
+    var resolutions = ["play more music 🎸",
+                   "read more books 📚",
+                   "drink more water 💧"]
+    resolutions.append("Master Swift Programming")
+
+  // Task #2: Add more to the resolutions array using +=.      // RESULT: ["play more music 🎸", "read more books 📚", "drink more water 💧", "Master Swift Programming", "Master iOS Programming", "Land my First Development Job"]
+
+    resolutions += ["Master iOS Programming", "Land my First Development Job"]
+    print(resolutions)
+
