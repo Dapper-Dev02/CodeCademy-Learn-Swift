@@ -126,7 +126,7 @@ for char in funFact {                                                p
       }
     }
 
-// Module Project: Whale Talk
+// Module Project #1: Whale Talk
   /* Task #1: Create a variable named "input" that is equal to any phrase you’d like. This variable will contain the text that's going to translate into “whale talk”. */
     
     var input = "iOS Development is fun, but hard to learn."
@@ -144,3 +144,55 @@ for char in funFact {                                                p
           }
       }
       print(output)
+
+// Module Project #2: 99 Bottles of Milk
+  /* Objective: Write a program in that uses a "while loop" to print the “99 Bottles of Milk” song in its entirety. */  
+      var numBottles: Int = 99                                                                            // RESULT: 99 bottles of milk on the wall, 99 bottles of milk!
+      while numBottles > 0 {                                                                                         You take one down and pass it around...99 bottles of milk on the wall!
+        print("\(numBottles) bottles of milk on the wall, \(numBottles) bottles of milk!")                           (Continue to 0, then prints text below) 
+        print("You take one down and pass it around...\(numBottles) bottles of milk on the wall!")                   Go to the store and buy some more,
+        numBottles -= 1                                                                                              99 bottles of milk on the wall!
+      print("\(numBottles) bottles of milk on the wall!")
+  }
+      print("0 bottles of milk on the wall, 0 bottles of milk!")
+      print("Go to the store and buy some more,")
+      print("99 bottles of milk on the wall!")
+
+  /* Additional Project Challenge
+    /* Complete this project again using a for-in loop, and assign the lyrics of the song to some String variables.
+      var numBottles: Int = 99
+      var verse1: String = "\(numBottles) bottles of milk on the wall, \(numBottles) bottles of milk!"
+      var verse2: String = "You take one down and pass it around...\(numBottles) bottles of milk on the wall!" 
+        while numBottles > 0 {                                                                            // RESULT: Same as above.
+        for _ in 1...99 {
+          print(verse1)
+        numBottles -= 1
+          print(verse2)
+      }
+    }
+      print("0 bottles of milk on the wall, 0 bottles of milk!")
+      print("Go to the store and buy some more,")
+      print("99 bottles of milk on the wall!")
+
+// Module Project #3: Fizz Buzz
+ /* Write a program that outputs numbers from 1 to 100.            // RESULT: 1
+    - for multiples of 3, print Fizz.                                         2
+    - for multiples of 5, print Buzz.                                         Fizz
+    - For numbers which are multiples of both 3 and 5 print,                  4    
+      FizzBuzz. */                                                            Buzz
+    var lowerBound = 1                                                        Fizz
+    var maximumLimit = 100                                                    7
+    var counter = 1                                                           8
+                                                                            (Contiues until 100)
+    while counter <= maximumLimit {                        
+      if counter % 3 == 0 {
+        print("Fizz")
+      } else if counter % 5 == 0 {
+        print("Buzz")
+      } else if counter % 3 == 0 && counter & 5 == 0 {
+        print("FizzBuzz")
+      } else {
+        print(counter)
+      }
+    counter += 1 
+    }
