@@ -44,3 +44,98 @@
     resolutions += ["Master iOS Programming", "Land my First Development Job"]
     print(resolutions)
 
+// The .insert() and .remove() Methods.
+  // Task #1: Insert "GTG" at index 3.
+
+    var dna = ["ATG", "ACG", "GAA", "TAT"]      // RESULT: ["ACG", "GAA", "GTG", "TAT"]
+    dna.insert("GTG", at: 3)
+
+  // Task #2: Remove the item at index 0.
+
+    dna.remove(at: 0)
+    print(dna)
+
+// Iterating Over an Array
+  // Task #1: create a variable called total of type Double and give it a value of 0.0.
+
+    var receipt = [12.00, 3.75, 6.50, 19.99]
+    var total: Double = 0.0
+      for item in receipt {
+        total += item
+      }
+  
+  // Task #2: Change the value of total by multiplying itself by 1.08875.      // RESULT: 45.9888
+
+    total = total * 1.08875
+    print(total)
+
+// Module Optional Challenge
+  // Task: Write a Swift program to find the sum of even numbers and the product of odd numbers in an array.
+
+    var list = [2, 4, 3, 6, 1, 9]      // RESULT: Sum of even numbers is 12
+    var totalEven = 0                             Product of odd numbers is 27
+    var productOdd = 1
+      for item in list {
+        if item % 2 == 0 {
+          totalEven += item
+        } else {
+          productOdd *= item
+        }
+      }
+    print("Sum of even numbers is \(totalEven)")
+    print("Product of odd numbers is \(productOdd)")
+
+// Arrays Module Project #1: Make a Mixtape 101
+  // Write a program that holds the ultimate playlist of music in a Swift array.
+    // Task #1: Write a comment at the top of the program with the theme of your mixtape.
+      // The theme of my mixtake is Tokyo 90's Lofi.
+        print(".------------------------.")
+        print("| Tokyo Lofi 90's - 90 min |")
+        print("|     __  ______  __     |")
+        print("|    (  )|).....|(  )    |")
+        print("|    (__)|)_____|(__)    |")
+        print("|    ________________    |")
+        print("|___/_._o________o_._\\___|")
+    
+    // Task #2: Declare an array called mixtape that stores String values.
+        
+        var mixtape = [String]()
+   
+    /* Task #3: Take some time to find ten or more songs that you want to add the playlist. As you are finding them, use .append() to add them to the mixtape array. */
+
+        mixtape.append("Whispering Woods - Unknown")
+        mixtape.append("Nostalgic Nights - Unknown")
+        mixtape.append("Tranquil Twilight - Unknown")
+        mixtape.append("Sunset Memories - Unknown")
+        mixtape.append("Subtle Serenity - Unknown")
+        mixtape.append("Velvet Veil - Unknown")
+        mixtape.append("Soft Shadows - Unknown")
+        mixtape.append("Serene Soundscape - Unknown")
+        mixtape.append("Serenade of Silence - Unknown")
+        mixtape.append("Reflections of Raindrops - Unknown")
+
+    /* Task #4: Use the .count property to determine the number of songs in your mixtape. Wrap it in a print() statement to output that number. */
+
+        print(mixtape.count)
+
+    // Task #5: Use the .remove() method to take out one or two of the songs.
+
+        mixtape.remove(at: 0)
+        mixtape.remove(at: 6)                                                                // RESULT: .------------------------.
+                                                                                                        | Tokyo Lofi 90's - 90 min |
+    // Task #6: Use .remove() and .insert() methods to delete and add more tracks.                      |     __  ______  __     |
+                                                                                                        |    (  )|).....|(  )    |
+        mixtape.remove(at: 1)                                                                           |    (__)|)_____|(__)    |
+        mixtape.remove(at: 4)                                                                           |    ________________    |
+        mixtape.remove(at: 5)                                                                           |___/_._o________o_._\___|                       
+        mixtape.insert("Nostalgic Nights - Unknown", at: 4)                                             10
+        mixtape.insert("Ambient Aura - Unknown", at: 5)                                                 Nostalgic Nights - Unknown
+        mixtape.insert("Reflections of Raindrops - Unknown", at: 1)                                     Reflections of Raindrops - Unknown
+        mixtape.insert("Dreamy Vibes - Unknown", at: 3)                                                 Ethereal Echo - Unknown
+        mixtape.insert("Ethereal Echo - Unknown", at: 2)                                                Sunset Memories - Unknown
+                                                                                                        Dreamy Vibes - Unknown
+    // Task #7: print out the tracklist using a for-in loop                                             Subtle Serenity - Unknown
+                                                                                                        Velvet Veil - Unknown                                                                        
+        for item in mixtape {                                                                           Nostalgic Nights - Uknown
+          print(item)                                                                                   Ambient Aura - Unknown
+        }                                                                                               Serenade of Silence - Unknown
