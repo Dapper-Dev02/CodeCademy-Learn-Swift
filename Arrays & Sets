@@ -139,3 +139,74 @@
         for item in mixtape {                                                                           Nostalgic Nights - Uknown
           print(item)                                                                                   Ambient Aura - Unknown
         }                                                                                               Serenade of Silence - Unknown
+
+// Arrays Module Project #2: Palindrome
+  // Objective: Write a program that checks whether or not an array contains a palindrome.
+    /* Task #1: create an array named text with the value: ["h", "e", "l", "l", "o"] */
+
+      var text = ["h", "e", "l", "l", "l", "o"] 
+
+    // Task #2: declare an empty array called reversed of type String. 
+
+      var reversed = [String]()                                                // RESULT: This is not a palindrom!
+  
+    /* Task #3: create a counter variable that starts at 1 less than the size of text using the .count property. */
+
+      var counter = text.count - 1
+  
+    /* Task #4: create a while loop that has the condition of counter greater than or equal to 0. 
+    Before the decrement of the counter, add a line of code that appends the character in text at index counter to the end of reversed array. */
+
+      while counter >= 0 {
+        reversed.append(text[counter])
+        counter = counter - 1
+      }
+
+    /* Task #5: Create a conditional that prints out “We have a palindrome!” if text equals to reversed. */
+
+      if text == reversed {
+        print("We have a palindrome!")
+      } else {
+        print("This is not a palindrom!")
+
+// Arrays Module Project #3: Caeser's Cipher
+  // /* Objective: Write a program that encrypts a message by shifting each letter three places to the right. */
+
+    var alphabet: [Character] = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"] 
+
+    var secretMessage = "Codecademy".lowercased()
+
+    var message = Array(secretMessage)
+  
+      for i in 0 ..< message.count {                // RESULT: ["f", "r", "g", "h", "f", "d", "g", "h", "p", "b"]
+        for j in 0 ..< alphabet.count {
+          if message[i] == alphabet[j] {
+            message[i] = alphabet[(j+3) % 26]
+            break
+          }
+        }
+      }
+    print(message)
+
+// Creating a Set
+  /* Task #1: Create an empty set called consonants with Character type values. */
+
+  var consonants = Set<Character>()                                                    // RESULT: ["U", "O", "I", "E", "A"]
+
+  /* Task #2: Create a second set called vowels that contains the following values: "A", "E", "I", "O", "U". Then, Output vowels to the terminal. */
+
+  var vowels: Set = ["A", "E", "I", "O", "U"]
+  print(vowels)
+
+// .count and .isEmpty Properties
+  /* Task #1: Create an if statement with a conditional that checks if sockDrawer is empty using .isEmpty.
+        - Inside the if statement, print the output "Time to add some more socks!". */
+      
+  /* Task #2: Underneath the if statement, create an else statement. Then, print the following message inside the body of the else statement: We have [X] pairs of socks. */
+
+      var sockDrawer: Set = ["Red Polka Dots", "Blue Stripes", "Plain Whites"]        // RESULT: We have 3 pairs of socks.
+        if sockDrawer.isEmpty {
+          print("Time to add some more socks!")
+        } else {
+          print("We have \(sockDrawer.count) pairs of socks.")
+        }
