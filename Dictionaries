@@ -1,0 +1,107 @@
+// Creating an Empty Dictionary
+  /* Task #1: Declare an empty dictionary called emptyLiteral with String type keys and Int type values using dictionary literal syntax. */
+
+    var emptyLiteral: [String: Int] = [:]
+
+  /* Task #2: Declare an empty dictionary called emptyInitializer with String type keys and Bool type values using initializer syntax method. */
+
+    var emptyInitializer = [String: Bool]()
+
+// Creating a Dictionary Literal
+  /* Task #1: Declare a dictionary variable named roleModels that contains String type keys and String type values using dictionary literal syntax. */
+    
+    var roleModels: [String: String] = [:]
+
+  /* Task #2: Inside roleModels, add the following key-value pairs:
+        - "Mr. Rogers": "Fred McFeely Rogers"
+        - "The Crocodile Hunter": "Stephen Robert Irwin"
+        - "Bill Nye the Science Guy": "William Sanford Nye" */
+                                                                // RESULT: ["Bill Nye the Science Guy": "William Sanford Nye", "Mr. Rogers": "Fred McFeely Rogers", "The Crocodile Hunter": "Stephen Robert Irwin"]
+    var roleModels: [String: String] = [                         
+      "Mr. Rogers": "Fred McFeely Rogers",
+      "The Crocodile Hunter": "Stephen Robert Irwin",
+      "Bill Nye the Science Guy": "William Sanford Nye"
+    ]
+    print(roleModels)
+
+// Type Inference
+  /* Task: Declare a dictionary called movieYears using type inference syntax including the following key-value pairs in movieYears:
+            - "Finding Nemo": 2003
+            - "Toy Story": 1995 */
+    var movieYears = [                          // RESULT: ["Finding Nemo": 2003, "Toy Story": 1995]
+      "Finding Nemo": 2003,
+      "Toy Story": 1995
+    ]
+    print(movieYears)
+
+// Adding Elements
+  /* Task: Add the following key-value pairs to teaSteepingTemperature, then use print()
+      - "Green": 185
+      - "Rooibos": 212 */
+
+    var teaSteepingTemperature = [
+      "Black": 212,
+      "Oolong": 185,
+      "White": 185                            // RESULT: ["Rooibos": 212, "Oolong": 185, "White": 185, "Green": 185, "Black": 212]
+    ]
+
+    teaSteepingTemperature["Green"] = 185
+    teaSteepingTemperature["Rooibos"] = 212
+    print(teaSteepingTemperature)
+
+// Updating Elements
+  /* Task #1: Modify the value paired with the key "LOL" to be the correct term "Laugh Out Loud" using subscript syntax. */
+
+    var abbreviations = [
+      "LOL": "Laboring Over Latkes",
+      "LMK": "Let Me Know",
+      "BRB": "Bringing Radishes Back",
+      "GJOYC": "Great Job On Your Code"
+    ]                                              // RESULT: ["LOL": "Laugh Out Loud", "BRB": "Be Right Back", "GJOYC": "Great Job On Your Code", "LMK": "Let Me Know"]
+    abbreviations["LOL"] = "Laugh Out Loud"
+  
+  /* Task #2: Use the .updateValue() method to change the value associated with the key "BRB" to "Be Right Back". */
+
+    abbreviations.updateValue("Be Right Back", forKey: "BRB")
+    print(abbreviations)
+
+// Removing Elements
+  /* Task #1: Remove the key-value pair "maroon": "#800000" from rainbowHex using nil. */
+
+    var rainbowHex = [
+      "red": "#ff0000",
+      "pink": "#ffc0cb",
+      "yellow": "#ffff00",
+      "maroon": "#800000",
+      "green":  "#00ff00",
+      "blue": "#0000ff",
+      "violet": "#ee82ee"
+    ]
+    rainbowHex["maroon"] = nil
+  
+  /* Task #2: Remove the key-value pair "pink": "#ffc0cb" from rainbowHex using the .removeValue() method. */
+
+    rainbowHex.removeValue(forKey: "pink")
+  
+  /* Task #3: Remove all the elements from rainbowHex using .removeAll(). */
+
+    rainbowHex.removeAll()                // RESULT: [:]
+
+    print(rainbowHex)
+
+// Inspecting a Dictionary
+ /* Task #1: Create an if statement that checks if numberOfSides is empty using .isEmpty. */
+ /* Task #2: Add an else statement underneath the if statement you just created. */ 
+
+  var numberOfSides = [
+    "triangle": 3,
+    "square": 4,
+    "rectangle": 4,
+    "decagon": 10,
+    "triacontagon": 30
+  ]                            // RESULT: 5
+  if numberOfSides.isEmpty {
+    print("This dictionary has no elements in it.")
+  } else {
+    print(numberOfSides.count)
+  }
