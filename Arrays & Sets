@@ -210,3 +210,171 @@
         } else {
           print("We have \(sockDrawer.count) pairs of socks.")
         }
+
+// Inserting Elements
+  /* Task: Add the value "Hermione" to the set friends using .insert(). */
+
+    var friends: Set = ["Harry", "Ron"]
+    print("There are some things you can't share without ending up liking each other, and defeating a twelve-foot mountain troll is one of them.")
+
+    friends.insert("Hermione")            // RESULT: There are some things you can't share without ending up liking each other, and defeating a twelve-foot mountain troll is one of them.
+                                                    Friends: ["Hermione", "Ron", "Harry"]
+  /* Task #2: Add the value "Ron" to the set friends using .insert(). */
+
+    friends.insert("Ron")
+
+    print("Friends: \(friends)")
+
+// Removing Elements
+  /* Task #1: Remove the value "Pluto" from the set planets using .remove(), then print the value of planets */
+
+    var planets: Set = ["Earth", "Jupiter", "Mars", "Neptune", "Saturn", "Venus", "Uranus", "Mercury", "Pluto"]
+
+    planets.remove("Pluto")              // RESULT: ["Saturn", "Jupiter", "Mars", "Venus", "Uranus", "Neptune", "Mercury", "Earth"]
+    print(planets)                                  []
+
+  /* Task #2: Remove all the values from planets using .removeAll(), then print the value of planets again. */
+
+    planets.removeAll()
+    print(planets)
+
+// Checking for Elements
+  /* Task: Create an if/else statement that checks if "Blueberry" exists within the set coffeeFlavors using .contains()  
+      - In the if, print "One blueberry coffee coming right up."
+      - In the else, print "We do not serve that coffee flavor here." */
+
+      var coffeeFlavors: Set = ["Caramel", "Mocha", "Pumpkin Spice", "Vanilla", "Blueberry"]
+
+      if coffeeFlavors.contains("Blueberry") {                  // RESULT: One blueberry coffee coming right up.
+        print("One blueberry coffee coming right up.")
+      } else {
+        print("We do not serve that coffee flavor here.")
+      }
+
+// Iterating Through a Set
+  /* Task #1: Use a for-in loop to iterate through each element in the set thingsToPack, then name the placeholder item. */
+  /* Task #2: Inside the body of the loop, use .insert() to add item to the set suitcase.
+      - Outside the loop, print() the value of suitcase. */
+
+    var thingsToPack: Set = ["Bathing Suit", "Clothes", "Sunglasses", "Sunscreen", "Favorite Book", "Phone Charger"]
+
+    var suitcase = Set<String>()
+                                      // RESULT: ["Sunglasses", "Sunscreen", "Bathing Suit", "Phone Charger", "Clothes", "Favorite Book"]
+    for item in thingsToPack {
+      suitcase.insert(item)
+    }
+    print(suitcase)
+
+// Set Operations: .intersection()
+  /* Task: Use .intersection() to create a set called swimAndFly that contains the shared values of swim and fly. Then, use print() to output swimAndFly. */
+
+      var swim: Set = ["Turtles", "Ducks", "Puffins", "Shark"]
+                                                                      // RESULT: ["Puffins", "Ducks"]
+      var fly: Set = ["Humming birds", "Bats", "Ducks", "Puffins"]
+
+      var swimAndFly = swim.intersection(fly)
+      print(swimAndFly)
+
+// Set Operations: .union()
+  /* Create a set called alphabet that uses .union() to combine the values of the sets consonants and vowels.Then, use print() to output alphabet. */
+
+    var consonants: Set = ["B", "C", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
+
+    var vowels: Set = ["A", "E", "I", "O", "U"]        // RESULT: ["Q", "E", "P", "S", "I", "U", "H", "X", "M", "T", "A", "C", "Z", "D", "K", "V", "W", "Y", "J", "B", "G", "N", "F", "L", "R", "O"]
+
+    var alphabet = consonants.union(vowels)
+    print(alphabet)
+
+// Set Operations: .symmetricDifference()
+  /* Task: Use .symmetricDifference() to create a set called difference that contains the values that appear in either oscarWinners or emmyWinners but do not appear in both sets. Then, Print the value of difference. */
+
+    var oscarWinners: Set = ["Heath Ledger", "Rita Moreno", "Audrey Hepburn", "John Legend"]
+    var emmyWinners: Set = ["Peter Dinklage", "John Legend", "Audrey Hepburn", "Rita Moreno"]
+
+    var difference = oscarWinners.symmetricDifference(emmyWinners)        // RESULT: ["Peter Dinklage", "Heath Ledger"]
+    print(difference)
+
+// Set Operations: .subtracting()
+ /* Task: Use the set operation .subtracting() to create a set called veggieEmojis that contains any element that is in the set foodEmojis but not in the set fruitEmojis. Then, print the value of veggieEmojis. */
+
+    var foodEmojis: Set = ["🥕", "🍇", "🌶️", "🍒", "🍎", "🥦"]
+    var fruitEmojis: Set = ["🍇", "🍎", "🍒"]
+                                                                  // RESULT: ["🌶️", "🥦", "🥕"]
+    var veggieEmojis = foodEmojis.subtracting(fruitEmojis)
+    print(veggieEmojis)
+
+// Sets Project: School Roster
+
+  var spanish101: Set = ["Angela", "Declan", "Aldany", "Alex", "Sonny", "Alif", "Skyla"]
+  var german101: Set = ["Angela", "Alex", "Declan", "Kenny", "Cynara", "Adam"]
+  var advancedCalculus: Set = ["Cynara", "Gabby", "Angela", "Samantha", "Ana", "Aldany", "Galina", "Jasmine"]
+  var artHistory: Set = ["Samantha", "Vanessa", "Aldrian", "Cynara", "Kenny", "Declan", "Skyla"]
+  var englishLiterature: Set = ["Gabby", "Jasmine", "Alex", "Alif", "Aldrian", "Adam", "Angela"]
+  var computerScience: Set = ["Galina", "Kenny", "Sonny", "Alex", "Skyla"]
+
+  /* Task #1: Use the set operation .union() to combine all the students into one set called allStudents. */
+
+    var allStudents = spanish101.union(german101).union(advancedCalculus).union(artHistory).union(englishLiterature).union(computerScience)
+
+  /* Task #2: Use a for-in loop to iterate through allStudents and print() the name of each individual student. Then, use print() and .count() to output the total number of students. */
+
+    for _ in allStudents {
+      print("Angela", "Declan", "Aldany", "Alex", "Sonny", "Alif", "Skyla", "Kenny", "Adam", "Cynara", "Gabby", "Samantha", "Ana", "Galina", "Jasmine", "Vanessa", "Aldrian")
+    }
+    print(allStudents.count)
+  
+  /* Task #3: Create a set called noLanguage that contains the students who aren’t taking either german101 or spanish101 by using the .subtracting() operation. Then, output these names to the terminal. */
+
+    var noLanguage = allStudents.subtracting(german101).subtracting(spanish101)
+    print(noLanguage)
+
+  /* Task #4: Use the set operation .symmetricDifference() to store the names of these students in a set called spanishOrGerman. Then, print spanishOrGerman to the output terminal. */
+
+    var spanishOrGerman = spanish101.symmetricDifference(german101)
+    print(spanishOrGerman)
+
+   /* Task #5: Use the set operation .intersection() to create a set called languageAwardWinners that contains any students enrolled in all three classes. */
+
+    var languageAwardWinners = spanish101.intersection(german101).intersection(englishLiterature)
+    print(languageAwardWinners)
+
+  /* Task #6: Create a variable called sevenPlus and give it a value of 0. */
+
+    var sevenPlus = 0
+  
+  /* Task #7: Create a set called classSet that contains the set variable of each class. */
+
+    var classSet: Set = [spanish101, german101, advancedCalculus, artHistory, englishLiterature, computerScience]
+
+  /* Task #7: Use a for-in loop to iterate through each value in classSet.
+      - Inside the for-in loop, create an if statement that checks if the number of students in each set exceeds 7 or more by using the .count property. */
+
+    for aClass in classSet {
+      if aClass.count >= 7 {
+        sevenPlus += 1
+      }
+    } 
+    print("There are \(sevenPlus) classes with seven or more students")
+
+// RESULT: 
+Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+Angela Declan Aldany Alex Sonny Alif Skyla Kenny Adam Cynara Gabby Samantha Ana Galina Jasmine Vanessa Aldrian
+17
+["Ana", "Galina", "Aldrian", "Vanessa", "Jasmine", "Gabby", "Samantha"]
+["Kenny", "Aldany", "Skyla", "Sonny", "Cynara", "Adam", "Alif"]
+["Alex", "Angela"]
+There are 4 classes with seven or more students
