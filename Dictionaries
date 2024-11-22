@@ -105,3 +105,61 @@
   } else {
     print(numberOfSides.count)
   }
+
+// Accessing Values
+  /* Task #1: Assign the value associated with the key "Sunflower" in the dictionary flowerNames to a variable called sunflowerScientific using subscript syntax. Then, output the value of sunflowerScientific using print(). */
+  /* Task #2: Modify your code to unwrap the value of sunflowerScientific by appending ! to the code written in Instruction 1. */
+  
+    var flowerNames = [
+      "Lily": "Lilium",                
+      "Sunflower": "Helianthus", 
+      "Orchid": "Orchidaceae", 
+      "Daffodil": "Narcissus"
+    ]                                                      // RESULT: Helianthus
+    var sunflowerScientific = flowerNames["Sunflower"]!               A lily is referred to as a Lilium in the science community.
+    print(sunflowerScientific)
+
+  /* Use an if-let statement to assign the value associated with the key "Lily" to a variable called lilyScientific. Then, inside the body of the if statement, print() the following statement: A lily is referred to as a \(lilyScientific) in the science community. */
+
+    if let lilyScientific = flowerNames["Lily"] {
+      print("A lily is referred to as a \(lilyScientific) in the science community.")
+    }  
+
+// Iterating through a Dictionary
+  /* Task #1: iterate through the keys and values of the dictionary mythology using a for-in loop.
+      - Name the key placeholder greekName.
+      - Name the value placeholder romanName. */
+  /* Task #2: In the body of the loop, use print() to output the following statement: [greekName] is also known as [romanName] */
+    
+    var mythology = [
+      "Zeus": "Jupiter",
+      "Athena": "Minerva",             // RESULT: Poseidon is also known as Neptune
+      "Poseidon": "Neptune",                      Demeter is also known as Ceres
+       "Demeter": "Ceres"]                        Zeus is also known as Jupiter
+                                                  Athena is also known as Minerva
+    
+    for (greekName, romanName) in mythology {
+      print("\(greekName) is also known as \(romanName)")
+    }
+
+// Using .keys and .values
+  /* Task #1: Underneath the declaration of total, create a for-in loop that iterates only through the values of the dictionary lemonadeStand. Then, name the placeholder monthlyProfit and leave the body of the for-in loop empty. */
+  /* Task #2: In the body of the loop, increase the value of total by the value of monthlyProfit. */
+
+    var lemonadeStand = [
+      "April": 8.50,
+      "May": 12.75,
+      "June": 22.50,
+      "July": 38.25, 
+      "August": 32.50,
+      "September": 11.50
+    ]
+                                  // RESULT: Total profits are 126.0
+    var total: Double = 0.0
+
+    for monthlyProfit in lemonadeStand.values {
+      total += monthlyProfit
+    }
+
+    print("Total profits are \(total)")
+
