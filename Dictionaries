@@ -163,3 +163,129 @@
 
     print("Total profits are \(total)")
 
+// Dictionaries Module Project: Morse Decoder
+  /* Objective: write a program that uses dictionaries to encrypt and decrypt secret Morse code messages. */
+
+    var englishText = "this is a secret message"
+    var secretMessage = ".... --- .-- -.. -.--   .--. .- .-. - -. . .-."
+  /* Task #1: Create a dictionary called letterToMorse that stores individual letters of the alphabet as String type keys and their morse counterpart as String type values. */
+
+    var letterToMorse: [String: String] = [
+      "a": ".-",
+      "b": "-...",
+      "c": "-.-.",
+      "d": "-..",
+      "e": ".",
+      "f": "..-.",
+      "g": "--.",
+      "h": "....",
+      "i": "..",
+      "j": ".---",
+      "k": "-.-",
+      "l": ".-..",
+      "m": "--",
+      "n": "-.",
+      "o": "---",
+      "p": ".--.",
+      "q": "--.-",
+      "r": ".-.",
+      "s": "...",
+      "t": "-",
+      "u": "..-",
+      "v": "...-",
+      "w": ".--",
+      "x": "-..-",
+      "y": "-.--",
+      "z": "--.."
+    ]
+  /* Task #2: Create an empty String called morseText. This value will store the encrypted message. */
+
+    var morseText = ""
+  
+  /* Task #3: Use a for-in loop to iterate through each character in englishText, and name the placeholder element. */
+  /* Task #4: Inside the for-in loop, create an if-let statement that assigns a variable called morseChar to the value of a key in the dictionary letterToMorse. The key that will be used is the placeholder value element. */
+  /* Task #5: Inside the body of the if-let statement, modify morseText by appending morseChar as well as a space " " to the end of the value. */
+  /* Task #6: Create an else statement. Inside the else statement, modify morseText by appending three spaces " " to the end of the value to represent the space between new words. */
+  /* Task #7: Outside of the for-in loop, use print() to output morseText. */
+
+    for element in englishText {
+      if let morseChar = letterToMorse["\(element)"] {
+        morseText += morseChar + " "
+      } else {
+        morseText += "   "
+      }
+    }
+    print(morseText)
+  
+  // Task #8: Create an empty String called decodedMessage.
+
+    var decodedMessage = ""
+  
+  // Task #9: Create an empty String array called morseCodeArray.
+
+    var morseCodeArray = [String]()
+  
+  // Task #10: Create an empty String called currMorse.
+
+    var currMorse = ""
+
+  /* Task #11: Create a for-in loop that iterates through secretMessage. Then, name the placeholder value char. */
+  /* Task #12: Create an if statement that executes when the value of char is not a space " ". Then, inside the if statement, append the value of char to currMorse. */
+  /* Task #13: Create an else statement. Then, Inside of the else statement, create a switch statement accepts currMorse as its expression. */ 
+  /* Task #14: Inside the switch statement, set up the following cases:
+      - Case 1: The value of currMorse is "":
+        - Append a space " " to currMorse.
+      - Case 2: The value of currMorse is " ":
+        - Append a space " " to morseCodeArray.
+        - Set the value of currMorse to "".
+      - Default Case:
+        - Append the value of currMorse to morseCodeArray.
+        - Set the value of currMorse to "". */ 
+
+    for char in secretMessage {
+      if char !=  " " {
+        currMorse.append(char)
+      } else {
+        switch currMorse {
+          case "":
+            currMorse += " "
+          case " ":
+            morseCodeArray.append(" ")
+            currMorse = ""
+          default:
+            morseCodeArray.append(currMorse)
+            currMorse = ""
+        }
+      }
+    }
+  
+  /* Task #15: Outside of the for-in loop, finish populating morseCodeArray by appending currMorse. Then, print the value of morseCodeArray to see each Morse code letter contained as an individual element. */
+
+    morseCodeArray.append(currMorse)
+    print(morseCodeArray)
+
+  // Task #16: Create an empty dictionary called morseToLetter with String type keys and String type values. 
+
+    var morseToLetter = [String: String]()
+
+  /* Task #17: Create a for-in loop that iterates through the keys and the values of the letterToMorse dictionary. Then, name the key placeholder letter and the values placeholder morseChar. */
+  /* Task #18: In the body of the loop, add a key-value pair to morseToLetter with morseChar as the key and letter as the value. Outside of the loop, output the value of morseToLetter to check if all the values look correct. If everything looks okay, feel free to delete this print() statement. */
+
+    for (letter, morseChar) in letterToMorse {
+      morseToLetter[morseChar] = letter
+    }
+    print(morseToLetter)
+
+  // Task #19: Create a for-in loop that iterates through morseCodeArray. Name the place holder morseValue.
+  /* Task #20: Create an if-let statement that declares a letterChar variable that stores the value of morseToLetter[morseValue] only if the morseToLetter dictionary contains a key of morseValue. */
+  // Task #21: In the body of the if-let statement, append the value of letterChar to decodedMessage.
+  /* Task #22: Add an else statement underneath the newly created if-let statement. In the body of the else statement, append a space to the end of decodedMessage. */
+
+    for morseValue in morseCodeArray {
+      if let letterChar = morseToLetter[morseValue] {
+        decodedMessage += letterChar
+      } else {                                                            // RESULT: Howdy partner
+        decodedMessage += " "
+      }
+    }
+    print(decodedMessage)
