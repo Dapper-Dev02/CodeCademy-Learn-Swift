@@ -45,3 +45,57 @@
 
     print(findBMI())
 
+// Parameters & Arguments
+  /* Task #1: define a function, findCircumference(), that will accept a diameter parameter of type Double, and return a Double type.
+      - Within findCircumference(), use the return keyword to return the expression, 3.14 * diameter.   */
+
+    func findCircumference(diameter: Double) -> Double {
+      return 3.14 * diameter
+    }
+  
+  /* Task #2: Call the function and pass in a number argument for the diameter parameter. Save this function call in the variable, result. Then, on the following line, print the value of result. */
+
+    var result = findCircumference(diameter: 32.5)            // RESULT: 102.05
+    print(result)
+
+// Multiple Parameters
+ /* Task #1: set up a function, timeToDestination(), that will use an airplane’s speed and total distance to determine the duration of a flight.
+      - timeToDestination() should accept distance and speed parameters of type Int.
+      - timeToDestination() should return a value of the type Int. */
+  /* Task #2: Within the function body, declare the constant, time and use the following formula to assign it a mathematical expression that determines the length of a flight:
+      - time = distance /speed
+      - Following the variable declaration, return time. */
+
+      func timeToDestination(distance: Int, speed: Int) -> Int {
+        let time = distance / speed
+        return time
+      } 
+  
+  /* Task #3: Call the function and pass in the following information about the flight:                      // RESULT: 12
+      - The distance between Dubai and New York is 6836 miles. Pass in 6836 as the argument for distance.
+      - The average cruising speed is 560 miles per hour. Pass in 560 as the argument for speed.
+      - Wrap the function call in a print() statement. */
+
+      print(timeToDestination(distance: 6836, speed: 560))
+
+// Argument Labels
+ /* Task #1: Create a variable named friendsList of type [String] and assign it to an empty array. */
+
+    var friendsList = [String]()
+
+  /* Task #2: Write a function named addFriend. It should take in a parameter called friendName of type String, that has an argument label called named. */
+  /* Task #3: In the body of addFriend(named:) add logic that appends the parameter friendName to the friendsList variable. */
+
+    func addFriend(named friendName: String) {
+      friendsList.append(friendName)
+    }
+  /* Task #4: Call the addFriend(named:) method three times to add the following friends: “Alice”, “Bob”, and “Cindy”. */
+
+    addFriend(named: "Alice")
+    addFriend(named: "Bob")
+    addFriend(named: "Cindy")
+
+  // Task #5: Print the contents of the friendsList variable.      // RESULT: ["Alice", "Bob", "Cindy"]
+
+    print(friendsList)
+
